@@ -10,7 +10,7 @@ RUN add-apt-repository ppa:deadsnakes/ppa \
   git \
   python3.6 \
   python3-pip \
-  software-properties-common
+  software-properties-common \
   tree \
   vim \
   wget \
