@@ -1,4 +1,4 @@
-FROM python:latest
+FROM pipenv:latest
 # RUN
 RUN git clone https://github.com/r4-1n/nornir_setup.git \
   && git clone https://github.com/nornir-automation/nornir-tools.git \
