@@ -7,6 +7,7 @@ RUN git clone https://github.com/nornir-automation/nornir-tools.git \
 && apt-get update \
 && apt-get install -y \ 
    vim \
+   python3-pip\
 && python3 -m pip3 install \
    pipenv \
 && python3 -m pipenv install \
