@@ -32,4 +32,4 @@ RUN git clone https://github.com/r4-1n/nornir_setup.git \
 #  ./inventory \
 ## clone useful nornir-tools
 #&& git clone https://github.com/nornir-automation/nornir-tools.git
-CMD [ "pipenv", "shell" ]
+#CMD [ "pipenv", "shell" ]
