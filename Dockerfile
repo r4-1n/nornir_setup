@@ -1,4 +1,4 @@
-FROM pipenv:latest
+FROM python:latest
 # RUN
 RUN git clone https://github.com/r4-1n/nornir_setup.git \
   && git clone https://github.com/nornir-automation/nornir-tools.git \
@@ -32,4 +32,4 @@ RUN git clone https://github.com/r4-1n/nornir_setup.git \
 #  ./inventory \
 ## clone useful nornir-tools
 #&& git clone https://github.com/nornir-automation/nornir-tools.git
-#CMD [ "pipenv", "shell" ]
+CMD [ "vipython" ]
