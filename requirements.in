@@ -7,19 +7,3 @@ nornir_netmiko
 nornir_scrapli  
 nornir_utils 
 vipython 
-
-#Old Pipfile - good bye old friend *bang
-#name = "nornir"
-#url = "https://pypi.org/project/nornir/"
-#verify_ssl = false
-
-#[packages]
-#nornir = "*"
-#nornir_ansible = "*"
-#nornir_jinja2 = "*"
-#nornir_napalm = "*"
-#nornir_netbox = "*"
-#nornir_netmiko  = "*"
-#nornir_scrapli  = "*"
-#nornir_utils = "*"
-#vipython = "*"
