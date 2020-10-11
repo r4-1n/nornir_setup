@@ -17,7 +17,6 @@ RUN apt-get update && apt-get install -y \
      vipython \
   && git clone https://github.com/r4-1n/nornir_setup.git \
   && git clone https://github.com/nornir-automation/nornir-tools.git \
-  && pipenv run vipython
 # Create nornir3 standard files
 #&& touch \
 #  configs.yml \
@@ -33,4 +32,4 @@ RUN apt-get update && apt-get install -y \
 #  ./inventory \
 ## clone useful nornir-tools
 #&& git clone https://github.com/nornir-automation/nornir-tools.git
-#CMD [ "vipython" ]
+CMD [ "pipenv", "run","vipython" ]
