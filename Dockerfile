@@ -1,5 +1,11 @@
 FROM python:latest
 # RUN
+ENV PROJECT_DIR /usr/local/src/webapp
+
+WORKDIR ${PROJECT_DIR}
+
+COPY Pipfile Pipfile.lock ${PROJECT_DIR}/
+
 RUN git clone https://github.com/r4-1n/nornir_setup.git \
   && git clone https://github.com/nornir-automation/nornir-tools.git \
   && apt-get update && apt-get install -y \
@@ -32,4 +38,3 @@ RUN git clone https://github.com/r4-1n/nornir_setup.git \
 #  ./inventory \
 ## clone useful nornir-tools
 #&& git clone https://github.com/nornir-automation/nornir-tools.git
-CMD [ "vipython" ]
