@@ -1,6 +1,8 @@
 FROM python:latest
 # RUN
-RUN apt-get update && apt-get install -y \
+RUN git clone https://github.com/r4-1n/nornir_setup.git \
+  && git clone https://github.com/nornir-automation/nornir-tools.git \
+  && apt-get update && apt-get install -y \
      vim \
   && pip3 install \
      pipenv \
@@ -15,8 +17,6 @@ RUN apt-get update && apt-get install -y \
      nornir-utils \
      nornir \
      vipython \
-  && git clone https://github.com/r4-1n/nornir_setup.git \
-  && git clone https://github.com/nornir-automation/nornir-tools.git \
 # Create nornir3 standard files
 #&& touch \
 #  configs.yml \
@@ -32,4 +32,4 @@ RUN apt-get update && apt-get install -y \
 #  ./inventory \
 ## clone useful nornir-tools
 #&& git clone https://github.com/nornir-automation/nornir-tools.git
-CMD [ "pipenv", "run","vipython" ]
+CMD [ "pipenv", "shell" ]
