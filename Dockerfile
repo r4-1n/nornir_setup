@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y \
   python3-pip \
   tree \
   vim \
+  wget \
 && python3 -m pip install --upgrade pip \
 # Install nornir3, ipython pipenv w/ pip3
 && pip3 install \
