@@ -3,7 +3,7 @@ FROM ubuntu:16.04
 # Set working Directory
 WORKDIR /home/
 # Update/Add Repos
-RUN add-apt-repository ppa:deadsnakes/ppa
+RUN add-apt-repository ppa:deadsnakes/ppa \
 && apt-get update \
 && apt-get install -y \
 # Install python3 and upgrade pip3
