@@ -1,12 +1,11 @@
 [[source]]
-name = "pypi"
-url = "https://pypi.org/simple"
-verify_ssl = true
+name = "nornir"
+url = "https://pypi.org/project/nornir/"
+verify_ssl = false
 
 [dev-packages]
 
 [packages]
-ipython = "*"
 nornir = "*"
 nornir_ansible = "*"
 nornir_jinja2 = "*"
@@ -18,4 +17,4 @@ nornir_utils = "*"
 vipython = "*"
 
 [requires]
-python_version = "3.5.2"
+python_version > "3.6"
