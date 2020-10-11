@@ -10,16 +10,17 @@ RUN git clone https://github.com/nornir-automation/nornir-tools.git \
    python3-pip \
 && python3 -m pip install \
    pipenv \
-&& python3 -m pipenv install \
-   nornir \
-   nornir_ansible \
-   nornir_jinja2 \
-   nornir_napalm \
-   nornir_netbox \
-   nornir_netmiko  \
-   nornir_scrapli  \
-   nornir_utils \
-   vipython 
+CMD = [ "pipenv", "install" "--system" "--deploy" ]
+#&& python3 -m pipenv install \
+#   nornir \
+#   nornir_ansible \
+#   nornir_jinja2 \
+#   nornir_napalm \
+#   nornir_netbox \
+#   nornir_netmiko  \
+#   nornir_scrapli  \
+#   nornir_utils \
+#   vipython 
 
 
 # Create nornir3 standard files
