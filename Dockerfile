@@ -31,5 +31,5 @@ RUN apt-get update && apt-get install -y \
   defaults.yml \
   groups.yml \
   hosts.yml \
-  ./inventory
+  ./inventory \
 && git clone https://github.com/nornir-automation/nornir-tools.git
