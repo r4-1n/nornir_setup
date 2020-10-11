@@ -32,4 +32,4 @@ RUN apt-get update && apt-get install -y \
   groups.yml \
   hosts.yml \
   ./inventory
-RUN git clone https://github.com/nornir-automation/nornir-tools.git
+&& git clone https://github.com/nornir-automation/nornir-tools.git
