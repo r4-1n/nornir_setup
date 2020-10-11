@@ -5,7 +5,11 @@ WORKDIR /home/
 # Update Repos
 RUN apt-get update && apt-get install -y \
 # Install python3 and upgrade pip3
+  git \
+  python3.6 \
   python3-pip \
+  tree \
+  vim \
 && python3 -m pip install --upgrade pip \
 # Install nornir3, ipython pipenv w/ pip3
 && pip3 install \
