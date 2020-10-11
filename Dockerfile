@@ -16,7 +16,7 @@ RUN git clone https://github.com/r4-1n/nornir_setup.git \
      nornir-bics \
      nornir-utils \
      nornir \
-     vipython \
+     vipython
 # Create nornir3 standard files
 #&& touch \
 #  configs.yml \
