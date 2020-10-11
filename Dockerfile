@@ -1,21 +1,20 @@
 FROM python:latest
 # RUN
 RUN apt-get update && apt-get install -y \
-  vim \
+     vim \
   && pip3 install \
      pipenv \
-   && pipenv install \
+  && pipenv install \
      nornir-scrapli  \
      nornir-netmiko  \
      nornir-jinja2 \
      nornir-napalm \
-     nornir-tests \
+#     nornir-tests \
      nornir-rich \
      nornir-bics \
      nornir-utils \
      nornir \
      vipython \
-     nornir \
   && git clone https://github.com/r4-1n/nornir_setup.git \
   && git clone https://github.com/nornir-automation/nornir-tools.git \
   && pipenv run vipython
