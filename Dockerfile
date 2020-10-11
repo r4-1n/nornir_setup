@@ -6,7 +6,7 @@ RUN git clone https://github.com/r4-1n/nornir_setup.git \
      vim \
   && pip3 install \
      pipenv \
-  && pipenv install \
+  && pipenv install --system --deploy \
      nornir-scrapli  \
      nornir-netmiko  \
      nornir-jinja2 \
