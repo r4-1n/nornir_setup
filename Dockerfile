@@ -1,14 +1,12 @@
-FROM python:latest
-# RUN
+FROM python:3.7
+# ENV
 ENV PROJECT_DIR /usr/local/src/
-
-WORKDIR ${PROJECT_DIR}
-
-COPY Pipfile Pipfile.lock ${PROJECT_DIR}/
-
+# RUN
 RUN git clone https://github.com/r4-1n/nornir_setup.git \
   && git clone https://github.com/nornir-automation/nornir-tools.git \
-  && apt-get update && apt-get install -y && add-apt-repository ppa:deadsnakes/ppa -y \
+  && add-apt-repository ppa:deadsnakes/ppa -y \
+  && apt-get update \
+  && apt-get install -y \ 
      vim \
   && pip3 install \
      pipenv \
@@ -22,6 +20,12 @@ RUN git clone https://github.com/r4-1n/nornir_setup.git \
      nornir_scrapli  \
      nornir_utils \
      vipython 
+ENV PROJECT_DIR /usr/local/src/
+
+WORKDIR ${PROJECT_DIR}
+
+COPY Pipfile Pipfile.lock ${PROJECT_DIR}/
+
 # Create nornir3 standard files
 #&& touch \
 #  configs.yml \

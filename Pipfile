@@ -8,6 +8,14 @@ verify_ssl = true
 [packages]
 ipython = "*"
 nornir = "*"
+nornir_ansible = "*"
+nornir_jinja2 = "*"
+nornir_napalm = "*"
+nornir_netbox = "*"
+nornir_netmiko  = "*"
+nornir_scrapli  = "*"
+nornir_utils = "*"
+vipython = "*"
 
 [requires]
 python_version = "3.5.2"
