@@ -1,4 +1,5 @@
-FROM python:3.7
+FROM python:3.8-slim
+RUN pip install poetry install --no-root
 # RUN
 RUN git clone https://github.com/r4-1n/nornir_setup.git 
 WORKDIR /nornir_setup/
@@ -10,7 +11,7 @@ RUN git clone https://github.com/nornir-automation/nornir-tools.git \
    python3-pip \
 && python3 -m pip install \
    pipenv \
-CMD = [ "pipenv", "install" "--system" "--deploy" ]
+CMD = [ "pipenv", "install" "--system" "--deploy"]
 #&& python3 -m pipenv install \
 #   nornir \
 #   nornir_ansible \
