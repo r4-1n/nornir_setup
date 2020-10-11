@@ -2,12 +2,15 @@
 FROM ubuntu:16.04
 # Set working Directory
 WORKDIR /home/
-# Update Repos
-RUN apt-get update && apt-get install -y \
+# Update/Add Repos
+RUN add-apt-repository ppa:deadsnakes/ppa
+&& apt-get update \
+&& apt-get install -y \
 # Install python3 and upgrade pip3
   git \
   python3.6 \
   python3-pip \
+  software-properties-common
   tree \
   vim \
   wget \
