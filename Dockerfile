@@ -1,5 +1,5 @@
 # Get Ubuntu:latest
-FROM ubuntu:latest
+FROM ubuntu:16.04
 # Set working Directory
 WORKDIR /home/
 # Update Repos
