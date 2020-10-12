@@ -1,0 +1,5 @@
+---
+cisco_nxosv9k:
+    username: admin
+    password: admin
+    platform: ios
