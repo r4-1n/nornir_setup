@@ -1,18 +1,17 @@
 FROM python:3.8-slim
-RUN pip install poetry install --no-root
-# RUN
-RUN git clone https://github.com/r4-1n/nornir_setup.git 
+RUN git clone https://github.com/r4-1n/nornir_setup.git \ 
+&& git clone https://github.com/nornir-automation/nornir-tools.git 
 WORKDIR /nornir_setup/
-RUN git clone https://github.com/nornir-automation/nornir-tools.git \
-#&& add-apt-repository ppa:deadsnakes/ppa -y \
-&& apt-get update \
-&& apt-get install -y \ 
-   vim \
-   python3-pip \
-&& python3 -m pip install \
-   pipenv \
-CMD = [ "pipenv", "install" "--system" "--deploy"]
+RUN pip install pipenv \
+&& pip install -r requirements.txt 
+CMD = [ "pipenv", "run", "vipython" ]
+#&& apt-get install -y \ 
+   #vim \
+#   python3-pip \
+#&& python3 -m pip install \
+#   pipenv \
 #&& python3 -m pipenv install \
+#&& add-apt-repository ppa:deadsnakes/ppa -y \
 #   nornir \
 #   nornir_ansible \
 #   nornir_jinja2 \
