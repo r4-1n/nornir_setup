@@ -4,7 +4,8 @@ RUN git clone https://github.com/r4-1n/nornir_setup.git \
 WORKDIR /nornir_setup/
 RUN pip install pipenv \
 && pip install -r requirements.txt 
-CMD = [ "pipenv", "install", "--system", "--deploy", "--ignore-pipfile" ]
+&& pipenv install --system --deploy --ignore-pipfile
+CMD = [ "pipenv", "shell" ]
 #&& apt-get install -y \ 
    #vim \
 #   python3-pip \
