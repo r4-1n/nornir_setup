@@ -1,4 +1,4 @@
-FROM python:3.8-slim
+FROM python:latest
 RUN git clone https://github.com/r4-1n/nornir_setup.git \ 
 && git clone https://github.com/nornir-automation/nornir-tools.git 
 WORKDIR /nornir_setup/
