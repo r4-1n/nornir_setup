@@ -7,3 +7,4 @@ nornir_netmiko
 nornir_scrapli  
 nornir_utils 
 ipython 
+pipenv 
