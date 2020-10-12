@@ -7,3 +7,4 @@ nornir_netbox
 nornir_netmiko
 nornir_scrapli
 ipython
+vim
