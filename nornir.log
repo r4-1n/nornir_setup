@@ -1,0 +1,33 @@
+2020-10-14 01:31:41,321 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show interface brief'} on 1 hosts
+2020-10-14 01:31:46,992 - nornir.core.task -    ERROR -      start() - Host 'core_sw1': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.8/site-packages/nornir_scrapli/tasks/send_command.py", line 36, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/usr/local/lib/python3.8/site-packages/nornir/core/inventory.py", line 440, in get_connection
+    self.open_connection(
+  File "/usr/local/lib/python3.8/site-packages/nornir/core/inventory.py", line 492, in open_connection
+    conn_obj.open(
+  File "/usr/local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 88, in open
+    connection.open()
+  File "/usr/local/lib/python3.8/site-packages/scrapli/driver/driver.py", line 100, in open
+    self.transport.open()
+  File "/usr/local/lib/python3.8/site-packages/scrapli/transport/systemssh.py", line 236, in open
+    self._open_pty()
+  File "/usr/local/lib/python3.8/site-packages/scrapli/transport/systemssh.py", line 323, in _open_pty
+    self._authenticate()
+  File "/usr/local/lib/python3.8/site-packages/scrapli/decorators.py", line 113, in decorate
+    return self.multiprocessing_timeout(
+  File "/usr/local/lib/python3.8/site-packages/scrapli/decorators.py", line 286, in multiprocessing_timeout
+    result = future.get(timeout=self.timeout_duration)
+  File "/usr/local/lib/python3.8/multiprocessing/pool.py", line 771, in get
+    raise self._value
+  File "/usr/local/lib/python3.8/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/usr/local/lib/python3.8/site-packages/scrapli/transport/systemssh.py", line 373, in _authenticate
+    self._ssh_message_handler(output=output)
+  File "/usr/local/lib/python3.8/site-packages/scrapli/transport/systemssh.py", line 302, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host 10.138.0.20
+
