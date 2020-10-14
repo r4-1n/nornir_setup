@@ -1,0 +1,21 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+nornir = "*"
+nornir-utils = "*"
+nornir-ansible = "*"
+nornir-jinja2 = "*"
+nornir-napalm = "*"
+nornir-netbox = "*"
+nornir-netmiko = "*"
+nornir-scrapli = "*"
+ipython = "*"
+vim = "*"
+
+[requires]
+python_version = "3.8"
