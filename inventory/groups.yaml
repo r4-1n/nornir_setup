@@ -1,5 +1,15 @@
 ---
-cisco_nxosv9k:
+cisco_group:
     username: admin
     password: admin
     platform: ios
+
+juniper_group:
+    username: root
+    password: root
+    platform: junos
+    
+linux_group:
+    username: root
+    password: linux
+    platform: linux
