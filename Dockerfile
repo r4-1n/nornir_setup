@@ -1,4 +1,4 @@
-FROM python:latest
+FROM python-slim:latest
 #Clone repos and install required nornir packages
 RUN git clone https://github.com/r4-1n/nornir_setup.git \
 && cd /nornir_setup \
